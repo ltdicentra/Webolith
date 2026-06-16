@@ -89,6 +89,7 @@ function ChallengeResults({
 
   if (fixedLayout) {
     userTHStyle.width = '35%';
+    userTHStyle.maxWidth = '35%';
     tableLayoutStyle.tableLayout = 'fixed';
   }
 
@@ -98,6 +99,8 @@ function ChallengeResults({
 
     if (fixedLayout) {
       overflowStyle.overflow = 'hidden';
+      overflowStyle.textOverflow = 'ellipsis';
+      overflowStyle.whiteSpace = 'nowrap';
     }
 
     const scorePercentage = 100 * (entry.score / maxScore);
